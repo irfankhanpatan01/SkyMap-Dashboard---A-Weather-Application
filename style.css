@@ -38,3 +38,45 @@ body{
     font-weight: 200;
     letter-spacing:0.5px;
 }
+.menu-btn{
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.short{
+    display: none;
+}
+@media (max-width:768px){
+    .btns{
+        display: none;
+    }
+    .brandname{
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+    .navbar{
+        padding: 10px 0;
+    }
+    .full{
+        display: none;
+    }
+    .short{
+        display: inline;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .btns{
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        flex-direction: column;
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        display: none;
+    }
+    .btns.active{
+        display: flex;
+    }
+}
