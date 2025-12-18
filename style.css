@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    padding: 10px 30px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brandname{
+    font-weight: 300;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+}
+.btns{
+    display: flex;
+    gap: 20px;
+}
+.btn1,
+.btn2{
+    width: 100px;
+    padding:8px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    color: white;
+    background-color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing:0.5px;
+}
