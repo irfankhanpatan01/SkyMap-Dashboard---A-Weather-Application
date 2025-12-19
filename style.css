@@ -15,7 +15,7 @@ body{
 }
 .brandname{
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     color: #333;
 }
@@ -27,15 +27,19 @@ body{
 .btn2{
     width: 100px;
     padding:8px;
-    border: none;
+    border:none;
     outline: none;
-    border-radius: 18px;
-    color: white;
-    background-color: #333;
+    color: black;
+    background-color: rgb(181, 181, 247);
     cursor: pointer;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing:0.5px;
+}
+.btn1:hover,
+.btn2:hover{
+    background-color: rgb(144, 144, 253);
+    color: white;
 }
 .menu-btn{
     display: none;
@@ -54,13 +58,15 @@ body{
     position: relative;
     width: 70%;
     margin-top: 30px;
+    display: flex;
+    
 }
 .input-search{
     width: 100%;
-    border-radius: 12px;
     padding: 16px 10px;
     border: 1px solid #333;
     outline: none;
+    border-right: none;
 }
 .input-label{
     position: absolute;
@@ -80,6 +86,45 @@ body{
     color: #555;
     top: 0;
     transform: translateY(-50%);
+}
+.searchBtn{
+    width: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #333;
+    letter-spacing: 1px;
+    border-left: none;
+    background: none;
+}
+.searchBtn:hover{
+    background: lightgray;
+    column-rule: black;
+}
+.card02{
+    /* border: 1px solid red; */
+    height: 775px;
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+}
+.left-side{
+    /* border: 1px solid black; */
+    height: 775px;
+    width: 30%;
+}
+.right-side{
+    height: 775px;
+    /* border: 1px solid pink; */
+    width: 70%;
+}
+.date-time{
+    margin-left: 10px;
+    margin-top: 10px;
+    color: black;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 @media (max-width:768px){
     .brandname{
