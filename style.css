@@ -120,11 +120,15 @@ body{
     width: 70%;
 }
 .date-time{
-    margin-left: 10px;
     margin-top: 10px;
     color: black;
     font-size: 1rem;
     letter-spacing: 0.5px;
+}
+.temp-degrees{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
 }
 @media (max-width:768px){
     .brandname{

@@ -22,5 +22,27 @@ function currentDateTime(){
 currentDateTime();
 setInterval(currentDateTime, 1000);
 const inputSearch=document.querySelector("#input-search");
-const searchBtn=document.querySelector("searchBtn");
+const searchBtn=document.querySelector("#searchBtn");
+const city=document.querySelector("#city");
+const temp=document.querySelector("#temp");
 const API_KEY="25264983150c5ae492808398dd919ab6";
+
+async function fetchCityWeather(cityName){
+        const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`);
+        const data=await response.json();
+        city.textContent=data.name
+        temp.textContent=Math.round(data.main.temp -273.15)+"°C";
+}
+
+searchBtn.addEventListener("click", ()=>{
+    const cityName=inputSearch.value.trim();
+    if(cityName==="")return;
+    fetchCityWeather(cityName);
+})
+inputSearch.addEventListener("keydown",(e)=>{
+    if(e.key==="Enter"){
+        const cityName=inputSearch.value.trim();
+        if(cityName==="")return
+        fetchCityWeather(cityName)
+    }
+})
