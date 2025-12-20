@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyMap Dashboard - A Weather Application</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-     <header class="landing-page">
-        <nav class="navbar">
-            <h1 class="brandname">
-                <span class="full">SkyMap Dashboard</span>
-                <span class="short">SkyMap</span>
-            </h1>
-            <div class="menu-btn">☰</div>
-            <div class="btns">
-                <button class="btn1" id="btn1">Sign Up</button>
-                <button class="btn2" id="btn2">Login</button>
-            </div>
-        </nav>
-        <section class="card01" id="card01">
-            <div class="input-group">
-                <input type="text" class="input-search" id="input-search" placeholder=" " required autocomplete="off">
-                <label for="input-search" class="input-label">Search your City or Airport</label>
-                <button id="searchBtn" class="searchBtn">Search</button>
-            </div>
-        </section>
-        <section class="card02" id="card02">
-            <div id="left-side" class="left-side">
-                <div id="date-time" class="date-time"></div>
-                <div id="temp-degrees" class="temp-degrees">
-                <div id="city" class="city">Hyderabad, India</div>
-                <div id="temp" class="temp">- 24°C</div>
-                </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyMap Dashboard</title>
 
-            </div>
-            <div id="right-side" class="right-side">
-            </div>
-        </section>
-     </header>
-    <script src="app.js"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="app">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h1 class="logo">SkyMap</h1>
+    <button class="menu-btn">☰</button>
+    <div class="nav-actions">
+      <button><a href="./signup.html" style="color: white; text-decoration: none;">Sign Up</a></button>
+      <button><a href="./login.html">Login</a></button>
+    </div>
+  </nav>
+
+  <!-- SEARCH -->
+  <section class="search-section">
+    <div class="search-box">
+      <input id="input-search" type="text" placeholder=" " autocomplete="off" \>
+      <label for="input-search">Search city or airport</label>
+      <button id="searchBtn">Search</button>
+    </div>
+  </section>
+  <div id="error-message" class="error-message"></div>
+
+
+  <!-- WEATHER + MAP -->
+  <section class="main-layout">
+    <div class="weather-panel">
+      <div id="date-time" class="date-time"></div>
+      <h2 id="city"></h2>
+      <h1 id="temp"></h1>
+
+      <p id="feels-like"></p>
+      <p id="humidity"></p>
+      <p id="wind-speed"></p>
+      <p id="weather-condition"></p>
+    </div>
+
+    <div class="map-panel">
+      <div id="map"></div>
+    </div>
+  </section>
+
+</header>
+
+<!-- FORECAST -->
+<section class="forecast">
+  <h3>Hourly Forecast</h3>
+  <div id="hourly" class="forecast-row"></div>
+
+  <h3>5-Day Forecast</h3>
+  <div id="daily" class="forecast-row"></div>
+</section>
+
+<script src="app.js"></script>
 </body>
 </html>

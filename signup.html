@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="card">
+        <h1>Sign up</h1>
+        <form >
+            <div class="input-group">
+            <input type="text" id="input-name" class="input-name" placeholder=" " required autocomplete="off">
+            <label for="input-name">Name</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="input-email" class="input-email" placeholder=" " required autocomplete="off">
+                <label for="input-email">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="input-pswd" class="input-pswd" placeholder=" " required autocomplete="off">
+                <label for="input-pswd">Password</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="input-confirm-pswd" class="input-confirm-pswd" placeholder=" " required autocomplete="off">
+                <label for="input-confirm-pswd">Confirm password</label>
+            </div>
+            <div class="input-group">
+                <button type="submit" class="btn1"><a href="./index.html" style="color: white; text-decoration: none;">Sign Up</a></button>
+            </div>
+        </form>
+        <p>Already have an account? <a href="./login.html">Log in</a></p>
+        <button id="btn2" class="btn2">Sign up with Google</button>
+    </div>
+</body>
+</html>
